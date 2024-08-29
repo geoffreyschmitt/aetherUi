@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SATComponentProps } from '@cl/shared/utils/componentProps/componentProps';
+import { SATComponentProps } from '@/utils/componentProps/componentProps';
 
 import { EIconVariant, Icon as Component } from '.';
 
