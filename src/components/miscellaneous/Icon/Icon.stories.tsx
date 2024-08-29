@@ -25,6 +25,6 @@ type Story = StoryObj;
 
 export const Icon: Story = {
   args: {
-    variant: EIconVariant.CLOSE,
+    variant: EIconVariant.CHEVRON,
   },
 };
