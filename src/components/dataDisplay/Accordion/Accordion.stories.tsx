@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { SATComponentProps } from '@/utils';
 
 import { Accordion as Component } from './Accordion';
-import { accordionItemListMock } from './mock';
+import { accordionItemListMock } from './mocks';
 import { expect, within } from '@storybook/test';
 
 const meta: Meta<typeof Component> = {
