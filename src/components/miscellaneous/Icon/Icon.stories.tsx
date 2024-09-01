@@ -5,7 +5,7 @@ import { SATComponentProps } from '@/utils/componentProps/componentProps';
 import { EIconVariant, Icon as Component } from '.';
 
 const meta: Meta<typeof Component> = {
-  title: 'Components/Icon',
+  title: 'Components/Miscellaneous/Icon',
   component: Component,
   argTypes: {
     ...SATComponentProps,

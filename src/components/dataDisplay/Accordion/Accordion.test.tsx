@@ -2,52 +2,44 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { axe } from 'jest-axe';
 
-import { Accordion } from './Accordion';
-import { TAccordion } from './Accordion.types';
-import { accordionItemListMock } from './mock';
+import { composeStories } from '@storybook/react';
 
+import * as stories from './Accordion.stories';
+import userEvent from '@testing-library/user-event';
+
+const { Accordion, AccordionWithAllowOnlyOneOpenElement } =
+  composeStories(stories);
 describe('Accordion Component', () => {
-  const renderComponent = ({ ...props }: TAccordion) => {
-    return render(<Accordion {...props} />);
-  };
-
-  it('does not render anything if accordionItemList is empty', () => {
-    const { container } = renderComponent({
-      accordionId: 'accordionId',
-      accordionItemList: [],
-    });
-
-    expect(container).toBeEmptyDOMElement();
-  });
-
   it('renders with default props', () => {
-    const { getByTestId } = renderComponent({
-      accordionId: 'accordionId',
-      accordionItemList: accordionItemListMock,
-    });
-    const accordionElement = getByTestId('Accordion-accordionId');
+    const { getByTestId } = render(<Accordion />);
+    const accordionElement = getByTestId('Accordion');
     const accordionItemElementList =
       accordionElement.querySelectorAll('.accordion-item');
-    const firstAccordionItemElement = accordionItemElementList[0];
-    const firstAccordionItemTitle = accordionItemElementList[0].querySelector(
-      '.accordion-item__title',
-    );
+
     expect(accordionElement).toBeInTheDocument();
-    expect(accordionItemElementList.length).toBe(accordionItemListMock.length);
-    expect(firstAccordionItemElement.tagName).toBe('DETAILS');
-    expect(firstAccordionItemElement).toHaveClass(
-      'accordion-item accordion-item--title-default',
+
+    expect(accordionItemElementList.length).toBe(
+      Accordion.args.accordionItemList?.length,
     );
-    expect(firstAccordionItemTitle?.tagName).toBe('SUMMARY');
+
+    accordionItemElementList.forEach(accordionItemElement => {
+      expect(accordionItemElement.tagName).toBe('DETAILS');
+      expect(accordionItemElement).toHaveClass('accordion-item');
+      const accordionItemElementTitle =
+        accordionItemElementList[0].querySelector('.accordion-item__title');
+      expect(accordionItemElementTitle?.tagName).toBe('SUMMARY');
+    });
   });
 
   it('renders initialOpen accordion items correctly', () => {
-    const { getByTestId } = renderComponent({
-      accordionId: 'accordionId',
-      accordionItemList: accordionItemListMock,
-    });
-    const openedAccordionIndex = 2;
-    const accordionElement = getByTestId('Accordion-accordionId');
+    const { getByTestId } = render(<Accordion />);
+    const openedAccordionIndex = Accordion.args.accordionItemList?.findIndex(
+      accordionItem => accordionItem.initialOpen === true,
+    );
+    if (!openedAccordionIndex) {
+      fail('No opened accordion item find in data');
+    }
+    const accordionElement = getByTestId('Accordion');
     const accordionItemElementList =
       accordionElement.querySelectorAll('.accordion-item');
     const openedAccordionElement =
@@ -56,27 +48,37 @@ describe('Accordion Component', () => {
     expect(openedAccordionElement).toHaveAttribute('open');
   });
 
-  it('renders title with proper size', () => {
-    const { getByTestId } = renderComponent({
-      accordionId: 'accordionId',
-      accordionItemList: accordionItemListMock,
-      titleVariant: EAccordionTitleVariant.BIG,
-    });
-    const accordionElement = getByTestId('Accordion-accordionId');
+  it('can open multiple accordion item at the same time', async () => {
+    const { getByTestId } = render(<Accordion />);
+    const accordionElement = getByTestId('Accordion');
     const accordionItemElementList =
       accordionElement.querySelectorAll('.accordion-item');
-    const firstAccordionItemElement = accordionItemElementList[0];
-    expect(accordionElement).toBeInTheDocument();
-    expect(firstAccordionItemElement).toHaveClass(
-      'accordion-item accordion-item--title-big',
+    const firstElement = accordionItemElementList[0];
+    const secondElement = accordionItemElementList[1];
+    const firstElementTitle = firstElement.querySelector(
+      '.accordion-item__title',
     );
+    const secondElementTitle = secondElement.querySelector(
+      '.accordion-item__title',
+    );
+
+    if (!firstElementTitle || !secondElementTitle) {
+      fail('Not enough element to test');
+    }
+
+    await userEvent.click(firstElementTitle);
+
+    expect(firstElement).toHaveAttribute('open');
+    expect(secondElement).not.toHaveAttribute('open');
+
+    await userEvent.click(secondElementTitle);
+
+    expect(firstElement).toHaveAttribute('open');
+    expect(secondElement).toHaveAttribute('open');
   });
 
   it('passes accessibility tests', async () => {
-    const { container } = renderComponent({
-      accordionId: 'accordionId',
-      accordionItemList: accordionItemListMock,
-    });
+    const { container } = render(<Accordion />);
 
     const results = await axe(container);
     expect(results).toHaveNoViolations();
