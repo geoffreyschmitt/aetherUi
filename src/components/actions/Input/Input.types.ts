@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 import { TComponentProps } from '@/utils';
 
