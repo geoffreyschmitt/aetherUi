@@ -24,9 +24,12 @@ export const Table = ({ className, headerList, rowList, ...props }: TTable) => {
       </div>
       {rowList?.map((row, i) => (
         <div key={`row-${row.id}`} className={'table__row'}>
-          {Object.entries(row).map(([key, value], index) => (
-            <div key={`row-value-${key}-${value}`}>{value}</div>
-          ))}
+          {headerList.map(
+            key =>
+              row[key] && (
+                <div key={`row-value-${key}-${row[key]}`}>{row[key]}</div>
+              ),
+          )}
         </div>
       ))}
     </RootElement>
