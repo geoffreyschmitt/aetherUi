@@ -5,7 +5,7 @@ export const RootElement = styled.div`
   width: 100%;
   container-type: inline-size;
   display: flex;
-  flex-direction: column-reverse;
+  align-items: center;
 
   .carousel__additional-content {
     margin-top: var(--spacing-300-px);
@@ -17,11 +17,13 @@ export const RootElement = styled.div`
   .carousel__scroll-button {
     cursor: pointer;
   }
-  .carousel__scroll-button--previous {
-    rotate: 180deg;
+
+  .carousel__scroll-button--next {
+    order: 3;
   }
 
   .carousel__item-list {
+    flex: 1 0 0;
     margin: 0;
     display: flex;
     overflow-x: auto;

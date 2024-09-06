@@ -83,10 +83,7 @@ export const Carousel = ({ className, itemList, ...props }: TCarousel) => {
   };
 
   const goPrevious = () => {
-    goToSlide(
-      (getPreviousSlideElementNotInScreen() + slideList?.length) %
-        slideList?.length,
-    );
+    goToSlide(getPreviousSlideElementNotInScreen());
   };
 
   const getPreviousSlideElementNotInScreen = () => {
@@ -108,6 +105,22 @@ export const Carousel = ({ className, itemList, ...props }: TCarousel) => {
       className={classNames('carousel', className)}
       ref={carouselRef}
     >
+      <button
+        className="carousel__scroll-button carousel__scroll-button--previous"
+        onClick={goPrevious}
+        disabled={activeIndex === 0}
+        aria-label={'Previous slides'}
+      >
+        prev
+      </button>
+      <button
+        className="carousel__scroll-button carousel__scroll-button--next"
+        onClick={goNext}
+        disabled={activeIndex >= itemList.length - 1}
+        aria-label={'Next slides'}
+      >
+        next
+      </button>
       <div className="carousel__item-list" ref={carouselItemListRef}>
         {itemList.map((item, index) => {
           return (
