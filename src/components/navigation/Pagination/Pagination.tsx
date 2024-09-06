@@ -76,7 +76,7 @@ export const Pagination = ({
                   },
                 )}
                 onClick={() => onPageChange(page)}
-                aria-label={`${currentPageIndex === page ? 'Current Page,' : 'Goto'} Page ${page}${page === 1 && '(first page)'}${page === totalPages && '(last page)'}`}
+                aria-label={`${currentPageIndex === page ? 'Current Page,' : 'Goto'} Page ${page} ${page === 1 ? '(first page)' : ''} ${page === totalPages ? '(last page)' : ''}`}
                 aria-current={currentPageIndex === page ? 'page' : undefined}
               >
                 {page}
