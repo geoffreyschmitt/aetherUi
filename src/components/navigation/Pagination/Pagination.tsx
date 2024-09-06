@@ -83,9 +83,9 @@ export const Pagination = ({
               </button>
             </li>
           ) : (
-            <span key={i} className={'pagination__divider'}>
-              {page}
-            </span>
+            <li key={i} className={'pagination__divider-wrapper'}>
+              <span className={'pagination__divider'}>{page}</span>
+            </li>
           ),
         )}
         <li className={'pagination__item'}>

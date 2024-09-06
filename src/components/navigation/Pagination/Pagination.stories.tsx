@@ -47,7 +47,10 @@ export const Pagination: Story = {
     return (
       <Component
         {...args}
-        onPageChange={setCurrentPaginationPage}
+        onPageChange={value => {
+          args.onPageChange(value);
+          setCurrentPaginationPage(value);
+        }}
         currentPageIndex={currentPaginationPage}
       />
     );
