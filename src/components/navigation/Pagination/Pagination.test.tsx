@@ -36,10 +36,12 @@ describe('Pagination', () => {
     let expectedValue = Pagination.args.currentPageIndex - 1;
     expect(onPageChangeSpy).toHaveBeenCalledWith(expectedValue);
     onPageChangeSpy.mockClear();
+
     fireEvent.click(nextBtn);
     expectedValue = expectedValue + 1;
     expect(onPageChangeSpy).toHaveBeenCalledWith(expectedValue);
     onPageChangeSpy.mockClear();
+
     fireEvent.click(nextBtn);
     expectedValue = expectedValue + 1;
     expect(onPageChangeSpy).toHaveBeenCalledWith(expectedValue);
