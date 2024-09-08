@@ -49,7 +49,7 @@ describe('Breadcrumb Component', () => {
     const breadcrumbLinkList =
       componentElement.querySelectorAll('.breadcrumb__link');
     breadcrumbLinkList.forEach((breadcrumbLink, index) => {
-      if (index === Breadcrumb.args.breadcrumbList?.length - 1) {
+      if (index === (Breadcrumb.args.breadcrumbList ?? [])?.length - 1) {
         expect(breadcrumbLink).toHaveAttribute('href', '');
         expect(breadcrumbLink).toHaveAttribute('role', 'button');
         expect(breadcrumbLink).toHaveAttribute('tabindex', '-1');
