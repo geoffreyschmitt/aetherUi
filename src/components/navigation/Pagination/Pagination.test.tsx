@@ -33,7 +33,7 @@ describe('Pagination', () => {
     }
 
     fireEvent.click(previousBtn);
-    let expectedValue = Pagination.args.currentPageIndex - 1;
+    let expectedValue = (Pagination.args.currentPageIndex as number) - 1;
     expect(onPageChangeSpy).toHaveBeenCalledWith(expectedValue);
     onPageChangeSpy.mockClear();
 

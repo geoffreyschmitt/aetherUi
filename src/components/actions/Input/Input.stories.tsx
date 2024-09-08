@@ -54,12 +54,12 @@ const meta: Meta<typeof Component> = {
 
 export default meta;
 
-type Story = StoryObj;
+type Story = StoryObj<typeof Component>;
 
 export const Input: Story = {
   args: {
     label: 'label',
-    onChange: fn(),
+    onChange: fn() as () => void,
   },
 };
 export const InputWithDefaultValue: Story = {
