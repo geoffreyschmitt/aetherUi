@@ -103,7 +103,7 @@ export const Carousel = ({
     goToSlide(getNextSlideElementNotInScreen());
   };
 
-  if (!itemList) {
+  if (!itemList.length) {
     return componentFallBack ?? null;
   }
 
