@@ -7,7 +7,12 @@ import { classNames } from '@/utils/classNames';
 import { RootElement } from './Carousel.styles';
 import { TCarousel } from './Carousel.types';
 
-export const Carousel = ({ className, itemList, ...props }: TCarousel) => {
+export const Carousel = ({
+  className,
+  itemList,
+  componentFallBack,
+  ...props
+}: TCarousel) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const carouselItemListRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -97,6 +102,10 @@ export const Carousel = ({ className, itemList, ...props }: TCarousel) => {
   const goNext = () => {
     goToSlide(getNextSlideElementNotInScreen());
   };
+
+  if (!itemList) {
+    return componentFallBack ?? null;
+  }
 
   return (
     <RootElement
