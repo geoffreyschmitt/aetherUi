@@ -1,24 +1,22 @@
-import React, { act } from 'react';
+import { act } from 'react';
 import { render } from '@testing-library/react';
 //import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
 
-import { Carousel } from './Carousel';
-import { TCarousel } from './Carousel.types';
+import { composeStories } from '@storybook/react';
+
+import * as stories from './Carousel.stories';
+
+const { Carousel } = composeStories(stories);
 
 describe('Carousel', () => {
-  const renderComponent = (props: TCarousel) => {
-    return render(<Carousel {...props} />);
-  };
-
   it('renders without crashes', () => {
-    const { container, getByTestId } = renderComponent({
-      itemList: [],
-    });
+    const { container, getByTestId } = render(<Carousel />);
     expect(container).toBeDefined();
-    const Carousel = getByTestId('Carousel');
-    expect(Carousel).toBeInTheDocument();
-    const productCardElementList = Carousel.querySelectorAll('.product-card');
+    const componentElement = getByTestId('Carousel');
+    expect(componentElement).toBeInTheDocument();
+    const productCardElementList =
+      componentElement.querySelectorAll('.product-card');
 
     expect(productCardElementList.length).toBe([]?.length);
   });
@@ -45,7 +43,7 @@ describe('Carousel', () => {
   });
 
   it('pass accessibility tests', async () => {
-    const { container } = renderComponent({ itemList: [] });
+    const { container } = render(<Carousel />);
 
     await act(async () => {
       const results = await axe(container);
