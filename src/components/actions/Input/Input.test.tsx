@@ -31,7 +31,7 @@ describe('Input Component', () => {
     expect(inputElement).toHaveAttribute('type', 'text');
 
     expect(labelElement).toBeInTheDocument();
-    expect(labelElement).toHaveTextContent(Input.args.label);
+    expect(labelElement).toHaveTextContent(Input.args.label as string);
   });
 
   it('render with customClassName', () => {
@@ -50,7 +50,7 @@ describe('Input Component', () => {
     );
     expect(beforeContentSlotElement).toBeInTheDocument();
     expect(beforeContentSlotElement).toHaveTextContent(
-      InputWithBeforeContentSlot.args.beforeContentSlot,
+      InputWithBeforeContentSlot.args.beforeContentSlot as string,
     );
   });
 
@@ -62,7 +62,7 @@ describe('Input Component', () => {
     );
     expect(afterContentSlotElement).toBeInTheDocument();
     expect(afterContentSlotElement).toHaveTextContent(
-      InputWithAfterContentSlot.args.afterContentSlot,
+      InputWithAfterContentSlot.args.afterContentSlot as string,
     );
   });
 
