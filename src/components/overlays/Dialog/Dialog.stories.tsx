@@ -38,7 +38,7 @@ type Story = StoryObj<typeof Component>;
 
 const dialogId = 'dialogId';
 const openDialog = () => {
-  dialogEventChannel.emit('openDialog', { dialogId });
+  dialogEventChannel.emit('openDialog', { id: dialogId });
 };
 
 export const Dialog: Story = {

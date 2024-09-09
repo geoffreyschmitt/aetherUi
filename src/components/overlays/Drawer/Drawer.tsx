@@ -1,0 +1,23 @@
+import React from 'react';
+import { RootElement } from './Drawer.styles';
+import { classNames } from '@/utils';
+import { TDrawer } from './Drawer.types';
+
+export const Drawer = ({
+  className,
+  children,
+  position,
+  ...props
+}: TDrawer) => {
+  return (
+    <RootElement
+      data-testid={'Drawer'}
+      {...props}
+      className={classNames('drawer', className)}
+      isModal
+      $position={position}
+    >
+      {children}
+    </RootElement>
+  );
+};
