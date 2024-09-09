@@ -26,13 +26,13 @@ export const Dialog = ({
 
   useEffect(() => {
     const unsubscribeOnOpen = dialogEventChannel.on('openDialog', payload => {
-      if (payload.dialogId === id) {
+      if (payload.id === id) {
         handleOpenDialog();
       }
     });
 
     const unsubscribeOnClose = dialogEventChannel.on('closeDialog', payload => {
-      if (payload.dialogId === id) {
+      if (payload.id === id) {
         handleCloseDialog();
       }
     });

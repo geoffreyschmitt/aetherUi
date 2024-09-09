@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 export type TDialog = TComponentPropsWithRequiredChildren &
   Readonly<{
-    dialogId: string;
+    id: string;
     closeButtonContentSlot?: ReactNode;
     closeButtonAriaLabel?: string;
     isModal?: boolean;
