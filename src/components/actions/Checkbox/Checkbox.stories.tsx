@@ -35,13 +35,13 @@ const meta: Meta<typeof Component> = {
 
 export default meta;
 
-type Story = StoryObj;
+type Story = StoryObj<typeof Component>;
 
 export const Checkbox: Story = {
   args: {
     id: 'checkbox',
     children: 'Couleur Nectarine',
-    onChange: fn(),
+    onChange: fn() as () => void,
   },
 };
 
