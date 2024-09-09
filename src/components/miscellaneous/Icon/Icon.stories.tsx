@@ -21,7 +21,7 @@ const meta: Meta<typeof Component> = {
 
 export default meta;
 
-type Story = StoryObj;
+type Story = StoryObj<typeof Component>;
 
 export const Icon: Story = {
   args: {
