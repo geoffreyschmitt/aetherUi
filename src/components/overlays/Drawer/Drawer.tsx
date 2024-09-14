@@ -7,10 +7,12 @@ export const Drawer = ({
   className,
   children,
   position,
+  DialogComponent = RootElement,
   ...props
 }: TDrawer) => {
   return (
     <RootElement
+      as={DialogComponent}
       data-testid={'Drawer'}
       {...props}
       className={classNames('drawer', className)}
