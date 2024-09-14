@@ -1,5 +1,6 @@
 import { TComponentPropsWithRequiredChildren } from '@/utils';
 import { TDialog } from '@/components/overlays/Dialog';
+import { ComponentType } from 'react';
 
 export enum EDrawerPosition {
   LEFT = 'left',
@@ -9,6 +10,14 @@ export enum EDrawerPosition {
 export type TDrawer = TComponentPropsWithRequiredChildren &
   Omit<TDialog, 'isModal'> &
   Readonly<{
+    /**
+     * Represents the dialog component used by the drawer
+     * It need to be based of the core Dialog component
+     */
+    DialogComponent?: ComponentType<TDialog & TDrawerStyled>;
+    /**
+     * Position of the Drawer
+     */
     position: EDrawerPosition;
   }>;
 
