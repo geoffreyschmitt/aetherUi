@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import CoreButtonMeta, {
   Button as CoreButton,
 } from '@/components/actions/Button/Button.stories';
-import { Button as Component } from '.';
+import { Button as Component } from './index';
 
 const meta: Meta<typeof Component> = {
   title: 'ImplementationExample/Actions/Button',

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ButtonLink as Component } from '.';
+import { ButtonLink as Component } from './index';
 import CoreButtonLinkMeta, {
   ButtonLink as CoreButtonLink,
 } from '@/components/actions/Button/ButtonLink.stories';
