@@ -1,9 +1,10 @@
 import { TComponentProps } from '@/utils';
 
-export type TProgressBar = TComponentProps & {
-  readonly widthPercentageOfProgressBar?: number;
-};
+export type TProgressBar = TComponentProps &
+  Readonly<{
+    widthPercentageOfProgressBar?: number;
+  }>;
 
-export type TProgressBarStyled = {
-  readonly $widthPercentageOfProgressBar?: string;
-};
+export type TProgressBarStyled = Readonly<{
+  $widthPercentageOfProgressBar?: string;
+}>;
