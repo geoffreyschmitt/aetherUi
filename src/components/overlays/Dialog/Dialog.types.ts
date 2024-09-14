@@ -1,5 +1,6 @@
 import { TComponentPropsWithRequiredChildren } from '@/utils';
-import { ReactNode } from 'react';
+import { ComponentType, ReactNode } from 'react';
+import { TButton } from '@/components/actions';
 
 export type TDialog = TComponentPropsWithRequiredChildren &
   Readonly<{
@@ -7,4 +8,5 @@ export type TDialog = TComponentPropsWithRequiredChildren &
     closeButtonContentSlot?: ReactNode;
     closeButtonAriaLabel?: string;
     isModal?: boolean;
+    ButtonComponent?: ComponentType<TButton> | 'button';
   }>;

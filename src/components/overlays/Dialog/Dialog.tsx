@@ -11,6 +11,7 @@ export const Dialog = ({
   closeButtonContentSlot,
   closeButtonAriaLabel,
   isModal,
+  ButtonComponent = 'button',
   ...props
 }: TDialog) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -52,14 +53,14 @@ export const Dialog = ({
       className={classNames('dialog', className)}
     >
       {closeButtonContentSlot && (
-        <button
+        <ButtonComponent
           className="dialog__close-button"
           onClick={handleCloseDialog}
           autoFocus
           aria-label={closeButtonAriaLabel ?? 'Close modal'}
         >
           {closeButtonContentSlot}
-        </button>
+        </ButtonComponent>
       )}
       <div className="dialog__content">{children}</div>
     </RootElement>
