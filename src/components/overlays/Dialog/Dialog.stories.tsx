@@ -29,6 +29,11 @@ const meta: Meta = {
         category: 'Data',
       },
     },
+    ButtonComponent: {
+      table: {
+        category: 'Data',
+      },
+    },
   },
 };
 
