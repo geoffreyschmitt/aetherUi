@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { SATComponentProps } from '@/utils';
 
 import { Breadcrumb as Component } from './Breadcrumb';
-import { breadcrumbItemListMock } from '@/components/navigation/Breadcrumb/mocks/breadcrumbItemList';
+import { breadcrumbItemListMock } from '@/components/navigations/Breadcrumb/mocks/breadcrumbItemList';
 
 const meta: Meta<typeof Component> = {
   title: 'Components/Navigation/Breadcrumb',
