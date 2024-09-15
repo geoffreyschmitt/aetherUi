@@ -7,7 +7,7 @@ import CorePaginationMeta, {
 import { useState } from 'react';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Navigations/Pagination',
+  title: 'Implementation Example/Navigations/Pagination',
   component: Component,
   argTypes: {
     ...CorePaginationMeta.argTypes,

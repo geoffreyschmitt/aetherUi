@@ -6,7 +6,7 @@ import CoreSelectMeta, {
 } from '@/components/actions/Select/Select.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Select',
+  title: 'Implementation Example/Actions/Select',
   component: Component,
   argTypes: {
     ...CoreSelectMeta.argTypes,

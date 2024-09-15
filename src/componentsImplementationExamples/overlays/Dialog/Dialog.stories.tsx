@@ -5,7 +5,7 @@ import { Dialog as Component } from '.';
 import { dialogEventChannel } from '@/eventChannels';
 
 const meta: Meta = {
-  title: 'ImplementationExample/Overlays/Dialog',
+  title: 'Implementation Example/Overlays/Dialog',
   component: Component,
   argTypes: {
     ...CoreDialog.argTypes,

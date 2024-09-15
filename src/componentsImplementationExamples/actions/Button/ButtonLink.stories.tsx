@@ -6,7 +6,7 @@ import CoreButtonLinkMeta, {
 } from '@/components/actions/Button/ButtonLink.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/ButtonLink',
+  title: 'Implementation Example/Actions/ButtonLink',
   component: Component,
   argTypes: {
     ...CoreButtonLinkMeta.argTypes,
