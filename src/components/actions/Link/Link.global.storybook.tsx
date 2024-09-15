@@ -6,4 +6,5 @@ export const SATLink = {
 
 export const LinkArgs = {
   children: 'read more',
+  href: '#',
 };
