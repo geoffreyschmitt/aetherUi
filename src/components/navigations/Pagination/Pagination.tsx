@@ -72,7 +72,7 @@ export const Pagination = ({
                   'pagination__link',
                   `pagination__link--page`,
                   {
-                    'pagination__ilink--is-current': currentPageIndex === page,
+                    'pagination__link--is-current': currentPageIndex === page,
                   },
                 )}
                 onClick={() => onPageChange(page)}
