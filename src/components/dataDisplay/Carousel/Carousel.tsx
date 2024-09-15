@@ -11,6 +11,8 @@ export const Carousel = ({
   className,
   itemList,
   componentFallBack,
+  previousButtonContentSlot,
+  nextButtonContentSlot,
   ...props
 }: TCarousel) => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -114,22 +116,27 @@ export const Carousel = ({
       className={classNames('carousel', className)}
       ref={carouselRef}
     >
-      <button
-        className="carousel__scroll-button carousel__scroll-button--previous"
-        onClick={goPrevious}
-        disabled={activeIndex === 0}
-        aria-label={'Previous slides'}
-      >
-        prev
-      </button>
-      <button
-        className="carousel__scroll-button carousel__scroll-button--next"
-        onClick={goNext}
-        disabled={activeIndex >= itemList.length - 1}
-        aria-label={'Next slides'}
-      >
-        next
-      </button>
+      {previousButtonContentSlot && (
+        <button
+          className="carousel__scroll-button carousel__scroll-button--previous"
+          onClick={goPrevious}
+          disabled={activeIndex === 0}
+          aria-label={'Previous slides'}
+        >
+          {previousButtonContentSlot}
+        </button>
+      )}
+
+      {nextButtonContentSlot && (
+        <button
+          className="carousel__scroll-button carousel__scroll-button--next"
+          onClick={goNext}
+          disabled={activeIndex >= itemList.length - 1}
+          aria-label={'Next slides'}
+        >
+          {nextButtonContentSlot}
+        </button>
+      )}
       <div className="carousel__item-list" ref={carouselItemListRef}>
         {itemList.map((item, index) => {
           return (
