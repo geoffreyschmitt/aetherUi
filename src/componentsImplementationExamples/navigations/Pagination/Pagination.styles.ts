@@ -15,7 +15,7 @@ export const RootElement = styled(Pagination)`
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     outline: none;
-    &.pagination__link--current,
+    &.pagination__link--is-current,
     &:focus,
     &:hover {
       color: black;
