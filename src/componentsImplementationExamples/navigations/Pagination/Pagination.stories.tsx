@@ -1,31 +1,16 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { fn } from '@storybook/test';
-
-import { SATComponentProps } from '@/utils';
 import { Pagination as Component } from '.';
+import CorePaginationMeta, {
+  Pagination as CorePagination,
+} from '@/components/navigations/Pagination/Pagination.stories';
 import { useState } from 'react';
 
-const meta: Meta = {
-  title: 'Components/Navigations/Pagination',
+const meta: Meta<typeof Component> = {
+  title: 'ImplementationExample/Navigations/Pagination',
   component: Component,
   argTypes: {
-    ...SATComponentProps,
-    totalPages: {
-      table: {
-        category: 'Data',
-      },
-    },
-    currentPageIndex: {
-      table: {
-        category: 'Data',
-      },
-    },
-    onPageChange: {
-      table: {
-        category: 'Events',
-      },
-    },
+    ...CorePaginationMeta.argTypes,
   },
 };
 
@@ -35,9 +20,7 @@ type Story = StoryObj<typeof Component>;
 
 export const Pagination: Story = {
   args: {
-    totalPages: 20,
-    currentPageIndex: 2,
-    onPageChange: fn(),
+    ...CorePagination.args,
   },
   render: args => {
     const [currentPaginationPage, setCurrentPaginationPage] = useState(

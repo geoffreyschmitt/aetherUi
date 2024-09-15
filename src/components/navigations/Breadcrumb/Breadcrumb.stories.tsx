@@ -6,7 +6,7 @@ import { Breadcrumb as Component } from './Breadcrumb';
 import { breadcrumbItemListMock } from '@/components/navigations/Breadcrumb/mocks/breadcrumbItemList';
 
 const meta: Meta<typeof Component> = {
-  title: 'Components/Navigation/Breadcrumb',
+  title: 'Components/Navigations/Breadcrumb',
   component: Component,
   argTypes: {
     ...SATComponentProps,
