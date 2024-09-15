@@ -6,7 +6,7 @@ import CoreInputMeta, {
 } from '@/components/actions/Input/Input.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Input',
+  title: 'Implementation Example/Actions/Input',
   component: Component,
   argTypes: {
     ...CoreInputMeta.argTypes,

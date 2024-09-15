@@ -6,7 +6,7 @@ import CoreCheckboxMeta, {
 } from '@/components/actions/Checkbox/Checkbox.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Checkbox',
+  title: 'Implementation Example/Actions/Checkbox',
   component: Component,
   argTypes: {
     ...CoreCheckboxMeta.argTypes,

@@ -6,7 +6,7 @@ import CoreLinkMeta, {
 } from '@/components/actions/Link/Link.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Link',
+  title: 'Implementation Example/Actions/Link',
   component: Component,
   argTypes: {
     ...CoreLinkMeta.argTypes,

@@ -6,7 +6,7 @@ import CoreButtonMeta, {
 import { Button as Component } from './index';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Button',
+  title: 'Implementation Example/Actions/Button',
   component: Component,
   argTypes: {
     ...CoreButtonMeta.argTypes,

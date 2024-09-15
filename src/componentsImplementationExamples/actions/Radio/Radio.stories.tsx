@@ -6,7 +6,7 @@ import CoreRadioMeta, {
 } from '@/components/actions/Radio/Radio.stories';
 
 const meta: Meta<typeof Component> = {
-  title: 'ImplementationExample/Actions/Radio',
+  title: 'Implementation Example/Actions/Radio',
   component: Component,
   argTypes: {
     ...CoreRadioMeta.argTypes,

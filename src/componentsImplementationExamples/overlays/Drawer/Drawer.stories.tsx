@@ -4,7 +4,7 @@ import { Drawer as CoreDrawer } from '@/components/overlays/Drawer/Drawer.storie
 import { dialogEventChannel } from '@/eventChannels';
 
 const meta: Meta = {
-  title: 'ImplementationExample/Overlays/Drawer',
+  title: 'Implementation Example/Overlays/Drawer',
   component: Component,
   argTypes: {
     ...CoreDrawer.argTypes,
