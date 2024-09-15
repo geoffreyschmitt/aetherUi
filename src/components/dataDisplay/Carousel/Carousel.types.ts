@@ -8,6 +8,14 @@ export type TCarousel = TComponentProps &
      */
     itemList: ReactNode[];
     /**
+     * Previous button content
+     */
+    previousButtonContentSlot: ReactNode;
+    /**
+     * Next button content
+     */
+    nextButtonContentSlot: ReactNode;
+    /**
      * fallback displayed when itemList is empty
      */
     componentFallBack?: ReactNode;

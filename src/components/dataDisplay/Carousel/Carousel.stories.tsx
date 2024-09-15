@@ -2,14 +2,26 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Carousel as Component } from './Carousel';
 import { expect, within } from '@storybook/test';
+import { SATComponentProps } from '@/utils';
 
 const meta: Meta = {
   title: 'Components/dataDisplay/Carousel',
   component: Component,
   argTypes: {
+    ...SATComponentProps,
     itemList: {
       table: {
         category: 'Data',
+      },
+    },
+    previousButtonContentSlot: {
+      table: {
+        category: 'Slots',
+      },
+    },
+    nextButtonContentSlot: {
+      table: {
+        category: 'Slots',
       },
     },
   },
@@ -28,6 +40,14 @@ export const Carousel: Story = {
     itemList: Array.from({ length: 10 }, (_, index) => (
       <span key={index}>item {index}</span>
     )),
+  },
+};
+
+export const CarouselWithButtons: Story = {
+  args: {
+    ...Carousel.args,
+    previousButtonContentSlot: '<',
+    nextButtonContentSlot: '>',
   },
 };
 
