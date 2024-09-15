@@ -1,4 +1,6 @@
 import type { Preview } from '@storybook/react';
+import React from 'react';
+import { GlobalStyles } from '@/GlobalStyles';
 
 const preview: Preview = {
   parameters: {
@@ -18,6 +20,15 @@ const preview: Preview = {
       disabledRules: ['color-contrast'],
     },
   },
+
+  decorators: [
+    Story => (
+      <>
+        <GlobalStyles />
+        <Story />
+      </>
+    ),
+  ],
 };
 
 export default preview;
