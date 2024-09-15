@@ -6,8 +6,8 @@ import { TProgressBarStyled } from './ProgressBar.types';
 export const RootElement = styled.div<TProgressBarStyled>`
   position: relative;
   width: 100%;
-  height: 4px;
-  background: hsla(240 5.9% 10% / 0.2);
+  height: var(--progress-bar-height, 4px);
+  background: var(--progress-bar-background, hsla(240 5.9% 10% / 0.2));
   &:before {
     content: '';
     display: block;
@@ -18,7 +18,7 @@ export const RootElement = styled.div<TProgressBarStyled>`
     width: ${({ $widthPercentageOfProgressBar }) =>
       $widthPercentageOfProgressBar ?? '0%'};
     max-width: 100%;
-    background: black;
+    background: var(--progress-bar-current-progress-background, black);
     transition: all 0.3s ease-in-out;
   }
 `;
