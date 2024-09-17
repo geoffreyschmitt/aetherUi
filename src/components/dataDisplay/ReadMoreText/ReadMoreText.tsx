@@ -78,6 +78,7 @@ export const ReadMoreText = ({
             aria-controls={`read-more-text-content--${id}`}
             aria-expanded={isOpen}
             onClick={handleClick}
+            className={'read-more__button'}
           >
             {isOpen ? buttonContentWhenOpenSlot : buttonContentWhenCloseSlot}
           </ButtonComponent>
