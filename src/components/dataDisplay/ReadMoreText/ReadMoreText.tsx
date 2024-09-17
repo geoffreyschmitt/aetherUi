@@ -17,6 +17,7 @@ export const ReadMoreText = ({
   buttonContentWhenOpenSlot,
   buttonContentWhenCloseSlot,
   numberOfLineToDisplayWhenTruncate,
+  ButtonComponent = 'button',
   ...props
 }: TReadMoreText) => {
   const textRef = useRef(null);
@@ -73,13 +74,13 @@ export const ReadMoreText = ({
       {showButton &&
         buttonContentWhenOpenSlot &&
         buttonContentWhenCloseSlot && (
-          <button
+          <ButtonComponent
             aria-controls={`read-more-text-content--${id}`}
             aria-expanded={isOpen}
             onClick={handleClick}
           >
             {isOpen ? buttonContentWhenOpenSlot : buttonContentWhenCloseSlot}
-          </button>
+          </ButtonComponent>
         )}
     </RootElement>
   );

@@ -34,6 +34,11 @@ const meta: Meta<typeof Component> = {
         category: 'Slots',
       },
     },
+    ButtonComponent: {
+      table: {
+        category: 'Components',
+      },
+    },
   },
 };
 
@@ -41,7 +46,7 @@ export default meta;
 
 type Story = StoryObj<typeof Component>;
 
-export const ProgressBar: Story = {
+export const ReadMoreText: Story = {
   args: {
     id: 'readMoreText',
     text: (
