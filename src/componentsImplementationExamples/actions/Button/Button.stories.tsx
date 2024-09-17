@@ -4,12 +4,20 @@ import CoreButtonMeta, {
   Button as CoreButton,
 } from '@/components/actions/Button/Button.stories';
 import { Button as Component } from './index';
+import { EButtonVariant } from './Button.global.types';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/Button',
   component: Component,
   argTypes: {
     ...CoreButtonMeta.argTypes,
+    style: {
+      options: Object.values(EButtonVariant),
+      control: { type: 'select' as const },
+      table: {
+        category: 'Styles',
+      },
+    },
   },
   decorators: [...(CoreButtonMeta.decorators as [])],
 };
@@ -34,4 +42,8 @@ export const ButtonIsLoading: Story = {
     ...Button.args,
     isLoading: true,
   },
+};
+
+export const ButtonSecondary: Story = {
+  args: { ...CoreButton.args, variant: EButtonVariant.SECONDARY },
 };
