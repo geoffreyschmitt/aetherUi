@@ -4,9 +4,10 @@ export enum EIconVariant {
   CHEVRON = 'chevron',
 }
 
-export type TIcon = TComponentProps & {
-  /**
-   * Available variant of the icon.
-   */
-  readonly variant: EIconVariant;
-};
+export type TIcon = TComponentProps &
+  Readonly<{
+    /**
+     * Available variant of the icon.
+     */
+    variant: EIconVariant;
+  }>;

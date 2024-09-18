@@ -1,8 +1,9 @@
 import { TComponentPropsWithRequiredChildren } from '@/utils';
 
-export type TButtonCommonProps = TComponentPropsWithRequiredChildren & {
-  /**
-   * Flag to show loading spinner.
-   */
-  readonly isLoading?: boolean;
-};
+export type TButtonCommonProps = TComponentPropsWithRequiredChildren &
+  Readonly<{
+    /**
+     * Flag to indicate that the button is loading
+     */
+    isLoading?: boolean;
+  }>;
