@@ -2,7 +2,7 @@
 import { css } from 'styled-components';
 
 export const ButtonGlobalStyle = css`
-  --button-color: #13a6e0;
+  --button-main-color: #13a6e0;
   display: inline-block;
   cursor: pointer;
   outline: none;
@@ -11,12 +11,12 @@ export const ButtonGlobalStyle = css`
   font-size: 14px;
 
   &.button--primary {
-    background: var(--button-color);
-    color: white;
+    --button-background: var(--button-main-color);
+    --button-color: white;
   }
 
   &.button--secondary {
-    border: 1px solid var(--button-color);
-    color: var(--button-color);
+    --button-border: 1px solid var(--button-main-color);
+    --button-color: var(--button-main-color);
   }
 `;
