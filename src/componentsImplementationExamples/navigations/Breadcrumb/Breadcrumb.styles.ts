@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 import { Breadcrumb } from '@/components/navigations/Breadcrumb';
 
