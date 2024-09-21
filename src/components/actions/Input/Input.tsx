@@ -12,8 +12,6 @@ export const Input = forwardRef<HTMLLabelElement, TInput>(
       className,
       label,
       defaultValue,
-      afterContentSlot,
-      beforeContentSlot,
       onChange,
       inputProps,
       hasError,
@@ -43,9 +41,6 @@ export const Input = forwardRef<HTMLLabelElement, TInput>(
           className,
         )}
       >
-        {beforeContentSlot && (
-          <div className={'input__before-content'}>{beforeContentSlot}</div>
-        )}
         <span className={'input__label'}>{label}</span>
         <input
           {...inputProps}
@@ -54,9 +49,6 @@ export const Input = forwardRef<HTMLLabelElement, TInput>(
           className={'input__input'}
           onChange={handleInputChange}
         />
-        {afterContentSlot && (
-          <div className={'input__after-content'}>{afterContentSlot}</div>
-        )}
       </RootElement>
     );
   },

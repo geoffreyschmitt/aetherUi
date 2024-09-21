@@ -7,7 +7,6 @@ import { RootElement } from './Radio.styles';
 import { TRadio } from './Radio.types';
 
 export const Radio = ({
-  id,
   className,
   children,
   checked,
@@ -33,8 +32,7 @@ export const Radio = ({
       <input
         {...checkboxProps}
         type="radio"
-        id={id}
-        className="radio__input"
+        className={classNames('radio__input', checkboxProps?.className)}
         checked={localChecked}
         onChange={() =>
           setLocalChecked(currentCheckedValue => !currentCheckedValue)

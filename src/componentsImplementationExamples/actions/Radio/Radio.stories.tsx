@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Radio as Component } from '.';
 import CoreRadioMeta, {
   Radio as CoreRadio,
+  RadioDefaultChecked as CoreRadioDefaultChecked,
 } from '@/components/actions/Radio/Radio.stories';
 
 const meta: Meta<typeof Component> = {
@@ -17,15 +18,6 @@ export default meta;
 
 type Story = StoryObj<typeof Component>;
 
-export const Radio: Story = {
-  args: {
-    ...CoreRadio.args,
-  },
-};
+export const Radio: Story = { ...CoreRadio };
 
-export const RadioDefaultChecked: Story = {
-  args: {
-    ...Radio.args,
-    checked: true,
-  },
-};
+export const RadioDefaultChecked: Story = { ...CoreRadioDefaultChecked };

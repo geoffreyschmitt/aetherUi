@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, HTMLAttributes } from 'react';
+import { HTMLAttributes, InputHTMLAttributes } from 'react';
 
 import { TComponentPropsWithChildren } from '@/utils';
 
@@ -6,13 +6,9 @@ export type TCheckbox = HTMLAttributes<HTMLElement> &
   TComponentPropsWithChildren &
   Readonly<{
     /**
-     * Id of the checkbox
+     * Background color of the checkbox
      */
-    id: string;
-    /**
-     * Color of the checkbox
-     */
-    color?: string;
+    backgroundColor?: string;
     /**
      * Color of the check
      */
@@ -34,6 +30,6 @@ export type TCheckbox = HTMLAttributes<HTMLElement> &
   }>;
 
 export type TCheckboxStyled = {
-  $color: TCheckbox['color'];
+  $backgroundColor: TCheckbox['backgroundColor'];
   $checkColor: TCheckbox['checkColor'];
 };

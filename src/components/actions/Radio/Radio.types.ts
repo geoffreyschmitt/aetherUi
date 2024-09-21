@@ -5,10 +5,6 @@ import { TComponentPropsWithChildren } from '@/utils';
 export type TRadio = TComponentPropsWithChildren &
   Readonly<{
     /**
-     * Id of the Radio
-     */
-    id: string;
-    /**
      * Denotes whether the checkbox is checked or not.
      */
     checked: boolean;
