@@ -2,6 +2,7 @@
 import { css } from 'styled-components';
 
 export const ButtonGlobalStyle = css`
-  background: transparent;
-  border: none;
+  background: var(--button-background, transparent);
+  border: var(--button-border, none);
+  color: var(--button-color, black);
 `;
