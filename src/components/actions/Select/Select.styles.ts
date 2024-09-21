@@ -30,10 +30,13 @@ export const RootElement = styled.div`
   }
 
   .select__option {
-    background-color: white;
+    background-color: var(--select-option-background-color, white);
     &:hover,
     &--focused {
-      background-color: lightblue;
+      background-color: var(
+        --select-option-background-interacting-color,
+        lightblue
+      );
     }
   }
 

@@ -3,8 +3,6 @@ import { css } from 'styled-components';
 
 export const ButtonGlobalStyle = css`
   --button-main-color: #13a6e0;
-  display: inline-block;
-  cursor: pointer;
   outline: none;
   border-radius: 20px;
   padding: 8px 16px;

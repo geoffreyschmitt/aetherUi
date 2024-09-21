@@ -21,18 +21,6 @@ const meta: Meta<typeof Component> = {
       },
       control: 'text',
     },
-    beforeContentSlot: {
-      table: {
-        category: 'Slots',
-      },
-      control: 'text',
-    },
-    afterContentSlot: {
-      table: {
-        category: 'Slots',
-      },
-      control: 'text',
-    },
     inputProps: {
       table: {
         category: 'Data',
@@ -66,19 +54,5 @@ export const InputWithDefaultValue: Story = {
   args: {
     ...Input.args,
     defaultValue: 'default-value',
-  },
-};
-
-export const InputWithBeforeContentSlot: Story = {
-  args: {
-    ...Input.args,
-    beforeContentSlot: 'beforeContentSlot',
-  },
-};
-
-export const InputWithAfterContentSlot: Story = {
-  args: {
-    ...Input.args,
-    afterContentSlot: 'afterContentSlot',
   },
 };

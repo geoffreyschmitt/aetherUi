@@ -6,14 +6,6 @@ export const RootElement = styled(Input)`
   position: relative;
   display: inline-block;
 
-  &.input--is-full-width {
-    width: 100%;
-  }
-
-  .input__wrapper-inner {
-    position: relative;
-  }
-
   .input__label {
     position: absolute;
     top: 50%;
@@ -26,7 +18,6 @@ export const RootElement = styled(Input)`
   }
 
   .input__input {
-    width: 100%;
     padding: 12px 8px;
   }
 
@@ -35,7 +26,7 @@ export const RootElement = styled(Input)`
   &.input--is-filled {
     .input__label {
       top: 0;
-      padding: 0 2px;
+      padding: 0 4px;
     }
   }
 `;

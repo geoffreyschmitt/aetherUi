@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Select as Component } from '.';
 import CoreSelectMeta, {
   Select as CoreSelect,
+  SelectWithLabel as CoreSelectWithLabel,
 } from '@/components/actions/Select/Select.stories';
 
 const meta: Meta<typeof Component> = {
@@ -17,8 +18,6 @@ export default meta;
 
 type Story = StoryObj<typeof Component>;
 
-export const Select: Story = {
-  args: {
-    ...CoreSelect.args,
-  },
-};
+export const Select: Story = { ...CoreSelect };
+
+export const SelectWithLabel: Story = { ...CoreSelectWithLabel };

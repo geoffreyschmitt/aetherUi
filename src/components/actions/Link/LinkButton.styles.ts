@@ -2,9 +2,9 @@
 import styled from 'styled-components';
 
 import { LinkGlobalStyle } from './Link.global.styles';
-import { TLinkGlobalStyle } from './Link.global.types';
+import { TLinkCommonProps } from './Link.global.types';
 
-export const RootElement = styled.button<TLinkGlobalStyle>`
+export const RootElement = styled.button<TLinkCommonProps>`
   background: transparent;
   border: none;
 
@@ -12,6 +12,5 @@ export const RootElement = styled.button<TLinkGlobalStyle>`
 
   &[disabled] {
     pointer-events: none;
-    color: var(--color-gray-40);
   }
 `;

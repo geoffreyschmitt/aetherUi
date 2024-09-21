@@ -15,7 +15,7 @@ const meta: Meta<typeof Component> = {
         category: 'Data',
       },
     },
-    color: {
+    backgroundColor: {
       table: {
         category: 'Styles',
       },
@@ -39,7 +39,6 @@ type Story = StoryObj<typeof Component>;
 
 export const Checkbox: Story = {
   args: {
-    id: 'checkbox',
     children: 'Couleur Nectarine',
     onChange: fn() as () => void,
   },
@@ -48,7 +47,7 @@ export const Checkbox: Story = {
 export const CheckboxWithCustomColor: Story = {
   args: {
     ...Checkbox.args,
-    color: '#F2A93B',
+    backgroundColor: '#F2A93B',
     checkColor: '#78a185',
   },
 };

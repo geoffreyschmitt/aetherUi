@@ -7,10 +7,9 @@ import { RootElement } from './Checkbox.styles';
 import { TCheckbox } from './Checkbox.types';
 
 export const Checkbox = ({
-  id,
   className,
   children,
-  color,
+  backgroundColor,
   checkColor,
   defaultChecked,
   onChange,
@@ -38,23 +37,18 @@ export const Checkbox = ({
         { 'checkbox--is-checked': checked },
         className,
       )}
-      $color={color}
+      $backgroundColor={backgroundColor}
       $checkColor={checkColor}
     >
-      <label className={'checkbox__label'}>
-        <input
-          {...checkboxProps}
-          type="checkbox"
-          id={id}
-          className="checkbox__input"
-          checked={checked}
-          onChange={handleChange}
-        />
-        <div className="checkbox__input-visual" />
-        {children && (
-          <span className="checkbox__input-content">{children}</span>
-        )}
-      </label>
+      <input
+        {...checkboxProps}
+        type="checkbox"
+        className="checkbox__input"
+        checked={checked}
+        onChange={handleChange}
+      />
+      <div className="checkbox__input-visual" />
+      {children && <span className="checkbox__input-content">{children}</span>}
     </RootElement>
   );
 };

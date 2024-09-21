@@ -3,17 +3,15 @@ import styled from 'styled-components';
 
 import { TCheckboxStyled } from './Checkbox.types';
 
-export const RootElement = styled.div<TCheckboxStyled>`
-  display: inline-block;
+export const RootElement = styled.label<TCheckboxStyled>`
   position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: var(--checkbox-gap, 8px);
 
   .checkbox__input {
     appearance: none;
     position: absolute;
-  }
-
-  .checkbox__label {
-    cursor: pointer;
   }
 
   .checkbox__input-visual {
@@ -21,10 +19,11 @@ export const RootElement = styled.div<TCheckboxStyled>`
     display: inline-block;
     top: 0;
     left: 0;
-    width: 18px;
-    height: 18px;
-    background: ${({ $color }) => $color ?? 'white'};
-    border: 1px solid black;
+    width: var(--checkbox-size, 18px);
+    height: var(--checkbox-size, 18px);
+    background: ${({ $backgroundColor }) =>
+      $backgroundColor ?? 'var(--checkbox-default-background, white)'};
+    border: var(--checkbox-border, 1px solid black);
     transition: all ease-in-out 0.3s;
   }
 
@@ -35,19 +34,20 @@ export const RootElement = styled.div<TCheckboxStyled>`
     left: 50%;
     width: 6px;
     height: 11px;
-    border: solid ${({ $checkColor }) => $checkColor ?? 'black'};
+    border: solid
+      ${({ $checkColor }) =>
+        $checkColor ?? 'var(--checkbox-default-check-color, black)'};
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
     display: none;
   }
 
   &.checkbox--is-checked {
-    .checkbox__label {
-      .checkbox__input-visual {
-        background: ${({ $color }) => $color ?? 'gray'};
-        &::after {
-          display: block;
-        }
+    .checkbox__input-visual {
+      background: ${({ $backgroundColor }) =>
+        $backgroundColor ?? 'transparent'};
+      &::after {
+        display: block;
       }
     }
   }

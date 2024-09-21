@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Checkbox as Component } from '.';
 import CoreCheckboxMeta, {
   Checkbox as CoreCheckbox,
+  CheckboxWithCustomColor as CoreCheckboxWithCustomColor,
+  CheckboxWithNoChildren as CoreCheckboxWithNoChildren,
 } from '@/components/actions/Checkbox/Checkbox.stories';
 
 const meta: Meta<typeof Component> = {
@@ -17,23 +19,12 @@ export default meta;
 
 type Story = StoryObj<typeof Component>;
 
-export const Checkbox: Story = {
-  args: {
-    ...CoreCheckbox.args,
-  },
-};
+export const Checkbox: Story = { ...CoreCheckbox };
 
 export const CheckboxWithCustomColor: Story = {
-  args: {
-    ...Checkbox.args,
-    color: '#F2A93B',
-    checkColor: '#78a185',
-  },
+  ...CoreCheckboxWithCustomColor,
 };
 
 export const CheckboxWithNoChildren: Story = {
-  args: {
-    ...Checkbox.args,
-    children: undefined,
-  },
+  ...CoreCheckboxWithNoChildren,
 };

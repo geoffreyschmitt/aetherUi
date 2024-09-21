@@ -23,3 +23,9 @@ export const Select: Story = {
     optionList: selectOptionListMock,
   },
 };
+export const SelectWithLabel: Story = {
+  args: {
+    ...Select.args,
+    label: 'label of the component',
+  },
+};

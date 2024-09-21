@@ -18,8 +18,4 @@ export default meta;
 
 type Story = StoryObj<typeof Component>;
 
-export const ButtonLink: Story = {
-  args: {
-    ...CoreButtonLink.args,
-  },
-};
+export const ButtonLink: Story = { ...CoreButtonLink };

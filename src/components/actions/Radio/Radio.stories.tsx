@@ -19,7 +19,6 @@ type Story = StoryObj<typeof Component>;
 
 export const Radio: Story = {
   args: {
-    id: 'Radio',
     children: 'Couleur Nectarine',
     checked: false,
     onChange: fn(),

@@ -9,7 +9,5 @@ export type TInput = TComponentProps &
     defaultValue?: InputHTMLAttributes<HTMLInputElement>['value'];
     hasError?: boolean;
     onChange?: (value: string) => void;
-    beforeContentSlot?: ReactNode;
-    afterContentSlot?: ReactNode;
     inputProps?: Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>;
   }>;
