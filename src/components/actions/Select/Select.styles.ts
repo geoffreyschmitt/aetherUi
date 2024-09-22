@@ -45,6 +45,7 @@ export const RootElement = styled.div`
       display: block;
       position: absolute;
       top: 100%;
+      z-index: 10;
     }
 
     .select__value-icon {
