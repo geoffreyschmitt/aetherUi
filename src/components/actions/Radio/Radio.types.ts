@@ -1,15 +1,15 @@
-import { HTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 import { TComponentPropsWithChildren } from '@/utils';
 
 export type TRadio = TComponentPropsWithChildren &
   Readonly<{
     /**
-     * Denotes whether the checkbox is checked or not.
+     * The value of the radio
      */
-    checked: boolean;
+    value?: string;
     /**
      * Props that can be passed to a checkbox html element
      */
-    checkboxProps?: HTMLAttributes<HTMLInputElement>;
+    checkboxProps?: InputHTMLAttributes<HTMLInputElement>;
   }>;

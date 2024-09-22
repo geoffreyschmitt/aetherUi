@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { classNames } from '@/utils';
 
@@ -9,34 +9,23 @@ import { TRadio } from './Radio.types';
 export const Radio = ({
   className,
   children,
-  checked,
+  defaultChecked,
   checkboxProps,
+  value,
   ...props
 }: TRadio) => {
-  const [localChecked, setLocalChecked] = useState<boolean>(checked ?? false);
-
-  useEffect(() => {
-    setLocalChecked(checked);
-  }, [checked]);
-
   return (
     <RootElement
       data-testid={`Radio`}
       {...props}
-      className={classNames(
-        'radio',
-        { 'radio--is-checked': localChecked },
-        className,
-      )}
+      className={classNames('radio', className)}
     >
       <input
         {...checkboxProps}
         type="radio"
         className={classNames('radio__input', checkboxProps?.className)}
-        checked={localChecked}
-        onChange={() =>
-          setLocalChecked(currentCheckedValue => !currentCheckedValue)
-        }
+        value={value}
+        defaultChecked={defaultChecked}
       />
       <div className="radio__input-visual" />
       <span className="radio__text">{children}</span>
