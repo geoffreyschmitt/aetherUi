@@ -7,6 +7,7 @@ import { Radio } from '@/componentsImplementationExamples/actions/Radio';
 import { Checkbox } from '@/componentsImplementationExamples/actions/Checkbox';
 import { Select } from '@/componentsImplementationExamples/actions/Select';
 import { RadioList } from '@/componentsImplementationExamples/lists/RadioList';
+import { Button } from '@/componentsImplementationExamples/actions/Button';
 
 export const Form = ({ ...props }: TForm) => {
   return (
@@ -17,6 +18,7 @@ export const Form = ({ ...props }: TForm) => {
       CheckboxComponent={Checkbox}
       SelectComponent={Select}
       RadioListComponent={RadioList}
+      ButtonComponent={Button}
     />
   );
 };

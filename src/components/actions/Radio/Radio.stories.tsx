@@ -20,7 +20,7 @@ type Story = StoryObj<typeof Component>;
 export const Radio: Story = {
   args: {
     children: 'Couleur Nectarine',
-    checked: false,
+    defaultChecked: false,
     onChange: fn(),
   },
 };
@@ -28,6 +28,6 @@ export const Radio: Story = {
 export const RadioDefaultChecked: Story = {
   args: {
     ...Radio.args,
-    checked: true,
+    defaultChecked: true,
   },
 };

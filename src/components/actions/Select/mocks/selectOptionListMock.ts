@@ -1,4 +1,6 @@
-export const selectOptionListMock = [
+import { TSelect } from '@/components/actions/Select';
+
+export const selectOptionListMock: TSelect['optionList'] = [
   {
     value: 'value',
     label: 'label',

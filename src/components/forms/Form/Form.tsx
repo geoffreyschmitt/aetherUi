@@ -1,24 +1,38 @@
-import React, { ReactNode } from 'react';
+import React, { FormEvent, ReactNode } from 'react';
 
 import { classNames } from '@/utils';
 
 import { RootElement } from './Form.styles';
-import { TForm, TFormEntry } from './Form.types';
+import {
+  TCheckboxFormEntry,
+  TForm,
+  TFormEntry,
+  TInputFormEntry,
+  TRadioFormEntry,
+  TRadioListFormEntry,
+  TSelectFormEntry,
+} from './Form.types';
 import { Input } from '@/components/actions/Input';
 import { Radio } from '@/components/actions/Radio';
 import { Checkbox } from '@/components/actions/Checkbox';
 import { Select } from '@/components/actions/Select';
 import { RadioList } from '@/components/lists/RadioList';
+import { dialogEventChannel, formEventChannel } from '@/eventChannels';
+import { Button } from '@/components/actions';
 
 export const Form = ({
   className,
+  id,
   formEntryList,
   InputComponent = Input,
   RadioComponent = Radio,
   CheckboxComponent = Checkbox,
   SelectComponent = Select,
   RadioListComponent = RadioList,
+  ButtonComponent = Button,
+  buttonCtaProps,
   beforeFormContentSlots,
+  beforeFormSubmitCtaSlots,
   afterFormContentSlots,
   ...props
 }: TForm) => {
@@ -30,51 +44,66 @@ export const Form = ({
       case 'input':
         return (
           <InputComponent
-            {...formEntryProps}
-            className={classNames('form-entry', formEntryProps.className)}
+            {...(formEntryProps as TInputFormEntry)}
+            className={classNames('form__form-entry', formEntryProps.className)}
           />
         );
       case 'radio':
         return (
           <RadioComponent
-            {...formEntryProps}
-            className={classNames('form-entry', formEntryProps.className)}
+            {...(formEntryProps as TRadioFormEntry)}
+            className={classNames('form__form-entry', formEntryProps.className)}
           />
         );
       case 'checkbox':
         return (
           <CheckboxComponent
-            {...formEntryProps}
-            className={classNames('form-entry', formEntryProps.className)}
+            {...(formEntryProps as TCheckboxFormEntry)}
+            className={classNames('form__form-entry', formEntryProps.className)}
           />
         );
       case 'select':
         return (
           <SelectComponent
-            {...formEntryProps}
-            className={classNames('form-entry', formEntryProps.className)}
+            {...(formEntryProps as TSelectFormEntry)}
+            className={classNames('form__form-entry', formEntryProps.className)}
           />
         );
       case 'radioList':
         return (
           <RadioListComponent
-            {...formEntryProps}
-            className={classNames('form-entry', formEntryProps.className)}
+            {...(formEntryProps as TRadioListFormEntry)}
+            className={classNames('form__form-entry', formEntryProps.className)}
           />
         );
       default:
         return null;
     }
   };
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement);
+    formEventChannel.emit('submitForm', { id, formData });
+  };
 
   return (
     <RootElement
       data-testid={`Form`}
       {...props}
+      id={id}
       className={classNames('form', className)}
+      onSubmit={handleSubmit}
     >
       {beforeFormContentSlots}
-      {formEntryList.map(formEntry => renderFormEntry(formEntry))}
+      <div className="form__form-entry-list">
+        {formEntryList.map(formEntry => renderFormEntry(formEntry))}
+      </div>
+      {beforeFormSubmitCtaSlots}
+      <ButtonComponent
+        {...buttonCtaProps}
+        className={'form__submit-cta'}
+        type={'submit'}
+      />
       {afterFormContentSlots}
     </RootElement>
   );

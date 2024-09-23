@@ -9,6 +9,7 @@ import { TCheckbox } from './Checkbox.types';
 export const Checkbox = ({
   className,
   children,
+  name,
   backgroundColor,
   checkColor,
   defaultChecked,
@@ -46,6 +47,7 @@ export const Checkbox = ({
         className="checkbox__input"
         checked={checked}
         onChange={handleChange}
+        name={name}
       />
       <div className="checkbox__input-visual" />
       {children && <span className="checkbox__input-content">{children}</span>}
