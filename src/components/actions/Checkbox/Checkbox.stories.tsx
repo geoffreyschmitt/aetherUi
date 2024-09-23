@@ -39,7 +39,7 @@ type Story = StoryObj<typeof Component>;
 
 export const Checkbox: Story = {
   args: {
-    children: 'Couleur Nectarine',
+    children: 'Checkbox children',
     onChange: fn() as () => void,
   },
 };
