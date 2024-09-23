@@ -18,6 +18,8 @@ export const Form = ({
   CheckboxComponent = Checkbox,
   SelectComponent = Select,
   RadioListComponent = RadioList,
+  beforeFormContentSlots,
+  afterFormContentSlots,
   ...props
 }: TForm) => {
   const renderFormEntry: (formEntry: TFormEntry) => ReactNode = ({
@@ -71,7 +73,9 @@ export const Form = ({
       {...props}
       className={classNames('form', className)}
     >
+      {beforeFormContentSlots}
       {formEntryList.map(formEntry => renderFormEntry(formEntry))}
+      {afterFormContentSlots}
     </RootElement>
   );
 };

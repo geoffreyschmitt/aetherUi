@@ -1,5 +1,5 @@
 import { TComponentProps } from '@/utils';
-import { ComponentType } from 'react';
+import { ComponentType, ReactNode } from 'react';
 import { TInput } from '@/components/actions/Input';
 import { TCheckbox } from '@/components/actions/Checkbox';
 import { TRadio } from '@/components/actions/Radio';
@@ -27,4 +27,6 @@ export type TForm = TComponentProps &
     RadioComponent: ComponentType<TRadio>;
     RadioListComponent: ComponentType<TRadioList>;
     SelectComponent: ComponentType<TSelect>;
+    beforeFormContentSlots?: ReactNode;
+    afterFormContentSlots?: ReactNode;
   }>;
