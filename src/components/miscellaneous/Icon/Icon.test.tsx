@@ -12,7 +12,7 @@ expect.extend(toHaveNoViolations);
 describe('Icon Component', () => {
   const renderComponent = (props: Partial<TIcon> = {}) => {
     const defaultProps: TIcon = {
-      variant: EIconVariant.CLOSE,
+      variant: EIconVariant.CHEVRON,
     };
 
     return render(<Icon {...defaultProps} {...props} />);
