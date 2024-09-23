@@ -11,6 +11,11 @@ export const ButtonGlobalStyle = css`
   &.button--primary {
     --button-background: var(--button-main-color);
     --button-color: white;
+    transition: all 0.3s;
+
+    &:hover {
+      --button-background: #136fe0;
+    }
   }
 
   &.button--secondary {
