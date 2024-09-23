@@ -6,6 +6,10 @@ export type TCheckbox = HTMLAttributes<HTMLElement> &
   TComponentPropsWithChildren &
   Readonly<{
     /**
+     * Name of the checkbox
+     */
+    name?: string;
+    /**
      * Background color of the checkbox
      */
     backgroundColor?: string;

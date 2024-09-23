@@ -5,6 +5,7 @@ import { TCheckbox } from '@/components/actions/Checkbox';
 import { TRadio } from '@/components/actions/Radio';
 import { TSelect } from '@/components/actions/Select';
 import { TRadioList } from '@/components/lists/RadioList';
+import { TButton } from '@/components/actions';
 
 export type TInputFormEntry = { componentType: 'input' } & TInput;
 export type TCheckboxFormEntry = { componentType: 'checkbox' } & TCheckbox;
@@ -21,12 +22,16 @@ export type TFormEntry =
 
 export type TForm = TComponentProps &
   Readonly<{
+    id: string;
     formEntryList: TFormEntry[];
-    InputComponent: ComponentType<TInput>;
-    CheckboxComponent: ComponentType<TCheckbox>;
-    RadioComponent: ComponentType<TRadio>;
-    RadioListComponent: ComponentType<TRadioList>;
-    SelectComponent: ComponentType<TSelect>;
+    InputComponent?: ComponentType<TInput>;
+    CheckboxComponent?: ComponentType<TCheckbox>;
+    RadioComponent?: ComponentType<TRadio>;
+    RadioListComponent?: ComponentType<TRadioList>;
+    SelectComponent?: ComponentType<TSelect>;
+    ButtonComponent?: ComponentType<TButton>;
+    buttonCtaProps: TButton;
     beforeFormContentSlots?: ReactNode;
+    beforeFormSubmitCtaSlots?: ReactNode;
     afterFormContentSlots?: ReactNode;
   }>;

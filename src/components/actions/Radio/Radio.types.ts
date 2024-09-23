@@ -9,7 +9,11 @@ export type TRadio = TComponentPropsWithChildren &
      */
     value?: string;
     /**
+     * The name of the radio
+     */
+    name?: string;
+    /**
      * Props that can be passed to a checkbox html element
      */
-    checkboxProps?: InputHTMLAttributes<HTMLInputElement>;
+    radioProps?: InputHTMLAttributes<HTMLInputElement>;
   }>;

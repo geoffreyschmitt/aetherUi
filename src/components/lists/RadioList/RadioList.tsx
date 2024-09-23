@@ -27,8 +27,8 @@ export const RadioList = ({
           <RadioComponent
             key={index}
             {...item}
-            checkboxProps={{
-              ...item.checkboxProps,
+            radioProps={{
+              ...item.radioProps,
               name: radioName,
             }}
           />

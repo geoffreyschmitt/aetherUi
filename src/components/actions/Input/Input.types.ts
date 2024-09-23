@@ -5,6 +5,7 @@ import { TComponentProps } from '@/utils';
 export type TInput = TComponentProps &
   InputHTMLAttributes<HTMLLabelElement> &
   Readonly<{
+    name: string;
     label: ReactNode;
     defaultValue?: InputHTMLAttributes<HTMLInputElement>['value'];
     hasError?: boolean;

@@ -10,8 +10,9 @@ export const Radio = ({
   className,
   children,
   defaultChecked,
-  checkboxProps,
+  radioProps,
   value,
+  name,
   ...props
 }: TRadio) => {
   return (
@@ -21,11 +22,12 @@ export const Radio = ({
       className={classNames('radio', className)}
     >
       <input
-        {...checkboxProps}
+        {...radioProps}
         type="radio"
-        className={classNames('radio__input', checkboxProps?.className)}
+        className={classNames('radio__input', radioProps?.className)}
         value={value}
         defaultChecked={defaultChecked}
+        name={name ?? radioProps?.name}
       />
       <div className="radio__input-visual" />
       <span className="radio__text">{children}</span>

@@ -10,6 +10,7 @@ export const Input = forwardRef<HTMLLabelElement, TInput>(
   (
     {
       className,
+      name,
       label,
       defaultValue,
       onChange,
@@ -44,10 +45,11 @@ export const Input = forwardRef<HTMLLabelElement, TInput>(
         <span className={'input__label'}>{label}</span>
         <input
           {...inputProps}
-          type="text"
+          type={inputProps?.type ?? 'text'}
           value={value}
-          className={'input__input'}
+          className={classNames('input__input', inputProps?.className)}
           onChange={handleInputChange}
+          name={name}
         />
       </RootElement>
     );
