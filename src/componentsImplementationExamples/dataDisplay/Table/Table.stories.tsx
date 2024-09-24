@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Table as Component } from '.';
 import CoreTableMeta, {
   Table as CoreTable,
-} from '@/components/dataDisplay/Table/Table.stories';
+} from '@/aether-ui-core/components/dataDisplay/Table/Table.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/Table',

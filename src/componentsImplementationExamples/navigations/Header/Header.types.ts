@@ -1,3 +1,3 @@
-import { THeader as TCoreHeader } from '@/components/navigations/Header';
+import { THeader as TCoreHeader } from '@/aether-ui-core/components/navigations/Header';
 
 export type THeader = TCoreHeader;

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion as Component } from '.';
 import CoreAccordionMeta, {
   Accordion as CoreAccordion,
-} from '@/components/dataDisplay/Accordion/Accordion.stories';
+} from '@/aether-ui-core/components/dataDisplay/Accordion/Accordion.stories';
 import { expect, within } from '@storybook/test';
 
 const meta: Meta<typeof Component> = {

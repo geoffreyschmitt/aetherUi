@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ReadMoreText as Component } from '.';
 import CoreReadMoreTextMeta, {
   ReadMoreText as CoreReadMoreText,
-} from '@/components/dataDisplay/ReadMoreText/ReadMoreText.stories';
+} from '@/aether-ui-core/components/dataDisplay/ReadMoreText/ReadMoreText.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/ReadMoreText',

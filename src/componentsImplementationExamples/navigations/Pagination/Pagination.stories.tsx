@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Pagination as Component } from '.';
 import CorePaginationMeta, {
   Pagination as CorePagination,
-} from '@/components/navigations/Pagination/Pagination.stories';
+} from '@/aether-ui-core/components/navigations/Pagination/Pagination.stories';
 import { useState } from 'react';
 
 const meta: Meta<typeof Component> = {

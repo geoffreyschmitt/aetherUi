@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Drawer as Component } from '.';
-import { Drawer as CoreDrawer } from '@/components/overlays/Drawer/Drawer.stories';
-import { dialogEventChannel } from '@/eventChannels';
+import { Drawer as CoreDrawer } from '@/aether-ui-core/components/overlays/Drawer/Drawer.stories';
+import { dialogEventChannel } from 'src/aether-ui-core/eventChannels';
 
 const meta: Meta = {
   title: 'Implementation Example/Overlays/Drawer',

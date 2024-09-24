@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BadgeList as Component } from '.';
 import CoreBadgeListMeta, {
   BadgeList as CoreBadgeList,
-} from '@/components/lists/BadgeList/BadgeList.stories';
+} from '@/aether-ui-core/components/lists/BadgeList/BadgeList.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Lists/BadgeList',

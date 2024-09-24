@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Footer } from '@/components/navigations/Footer';
+import { Footer } from '@/aether-ui-core/components/navigations/Footer';
 
 export const RootElement = styled(Footer)`
   background: #003f5f;

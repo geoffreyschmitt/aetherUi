@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Input } from '@/components/actions/Input';
+import { Input } from '@/aether-ui-core/components/actions/Input';
 
 export const RootElement = styled(Input)`
   position: relative;

@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { PageLayout as Component } from '.';
 import CorePageLayoutMeta, {
   PageLayout as CorePageLayout,
-} from '@/components/layouts/PageLayout/PageLayout.stories';
-import CoreFormMeta from '@/components/forms/Form/Form.stories';
+} from '@/aether-ui-core/components/layouts/PageLayout/PageLayout.stories';
+import CoreFormMeta from '@/aether-ui-core/components/forms/Form/Form.stories';
 
 const omittedArgTypes = ['headerContentSlot', 'footerContentSlot'];
 

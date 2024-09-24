@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Breadcrumb } from '@/components/navigations/Breadcrumb';
+import { Breadcrumb } from '@/aether-ui-core/components/navigations/Breadcrumb';
 
 export const RootElement = styled(Breadcrumb)`
   .breadcrumb__item-list {

@@ -1,3 +1,3 @@
-import { TTabs as TCoreTabs } from '@/components/dataDisplay/Tabs';
+import { TTabs as TCoreTabs } from '@/aether-ui-core/components/dataDisplay/Tabs';
 
 export type TTabs = TCoreTabs;

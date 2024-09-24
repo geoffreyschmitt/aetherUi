@@ -4,7 +4,7 @@ import { TextArea as Component } from '.';
 import CoreTextAreaMeta, {
   TextArea as CoreTextArea,
   TextAreaWithDefaultValue as CoreTextAreaWithDefaultValue,
-} from '@/components/actions/TextArea/TextArea.stories';
+} from '@/aether-ui-core/components/actions/TextArea/TextArea.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/TextArea',

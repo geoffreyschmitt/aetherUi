@@ -2,7 +2,7 @@ import React from 'react';
 
 import { RootElement } from './ContactForm.styles';
 import { TContactForm } from './ContactForm.types';
-import { classNames } from '@/utils';
+import { classNames } from 'src/aether-ui-core/utils';
 
 export const ContactForm = ({ className, ...props }: TContactForm) => {
   const formEntryList: TContactForm['formEntryList'] = [

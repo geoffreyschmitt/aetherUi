@@ -1,4 +1,4 @@
-import { TForm as TCoreForm } from '@/components/forms/Form';
+import { TForm as TCoreForm } from '@/aether-ui-core/components/forms/Form';
 
 export type TForm = Omit<
   TCoreForm,

@@ -1,4 +1,4 @@
-import { TTypography as TCoreTypography } from '@/components/miscellaneous/Typography';
+import { TTypography as TCoreTypography } from '@/aether-ui-core/components/miscellaneous/Typography';
 
 export enum ETypographyVariant {
   HEADING = 'heading',

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Footer as Component } from '.';
 import CoreFooterMeta, {
   Footer as CoreFooter,
-} from '@/components/navigations/Footer/Footer.stories';
+} from '@/aether-ui-core/components/navigations/Footer/Footer.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Navigations/Footer',

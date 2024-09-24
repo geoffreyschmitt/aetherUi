@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { TextArea } from '@/components/actions/TextArea';
+import { TextArea } from '@/aether-ui-core/components/actions/TextArea';
 
 export const RootElement = styled(TextArea)`
   position: relative;

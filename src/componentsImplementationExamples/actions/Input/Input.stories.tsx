@@ -4,7 +4,7 @@ import { Input as Component } from '.';
 import CoreInputMeta, {
   Input as CoreInput,
   InputWithDefaultValue as CoreInputWithDefaultValue,
-} from '@/components/actions/Input/Input.stories';
+} from '@/aether-ui-core/components/actions/Input/Input.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/Input',

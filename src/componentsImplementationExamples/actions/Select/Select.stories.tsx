@@ -5,7 +5,7 @@ import CoreSelectMeta, {
   Select as CoreSelect,
   SelectWithLabel as CoreSelectWithLabel,
   SelectWithAutoSelectFirstOption as CoreSelectWithAutoSelectFirstOption,
-} from '@/components/actions/Select/Select.stories';
+} from '@/aether-ui-core/components/actions/Select/Select.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/Select',

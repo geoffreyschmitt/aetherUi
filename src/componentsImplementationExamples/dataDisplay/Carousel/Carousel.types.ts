@@ -1,3 +1,3 @@
-import { TCarousel as TCoreCarousel } from '@/components/dataDisplay/Carousel';
+import { TCarousel as TCoreCarousel } from '@/aether-ui-core/components/dataDisplay/Carousel';
 
 export type TCarousel = TCoreCarousel;

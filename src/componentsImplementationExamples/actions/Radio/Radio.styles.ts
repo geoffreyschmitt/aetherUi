@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Radio } from '@/components/actions/Radio';
+import { Radio } from '@/aether-ui-core/components/actions/Radio';
 
 export const RootElement = styled(Radio)`
   --radio-gap: 16px;

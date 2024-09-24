@@ -1,3 +1,3 @@
-import { TBadge as TCoreBadge } from '@/components/dataDisplay/Badge';
+import { TBadge as TCoreBadge } from '@/aether-ui-core/components/dataDisplay/Badge';
 
 export type TBadge = TCoreBadge;

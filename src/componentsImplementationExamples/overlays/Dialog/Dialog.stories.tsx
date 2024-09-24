@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Dialog as CoreDialog } from '@/components/overlays/Dialog/Dialog.stories';
+import { Dialog as CoreDialog } from '@/aether-ui-core/components/overlays/Dialog/Dialog.stories';
 import { Dialog as Component } from '.';
-import { dialogEventChannel } from '@/eventChannels';
+import { dialogEventChannel } from 'src/aether-ui-core/eventChannels';
 
 const meta: Meta = {
   title: 'Implementation Example/Overlays/Dialog',

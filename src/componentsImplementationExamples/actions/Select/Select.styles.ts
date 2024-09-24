@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Select } from '@/components/actions/Select';
+import { Select } from '@/aether-ui-core/components/actions/Select';
 
 export const RootElement = styled(Select)`
   --select-option-background-interacting-color: lightgray;

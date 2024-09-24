@@ -6,7 +6,7 @@ import CoreTabsMeta, {
   TabsListWithEmptyContent as CoreTabsListWithEmptyContent,
   EmptyTabsWithFallback as CoreEmptyTabsWithFallback,
   EmptyTabsWithoutFallback as CoreEmptyTabsWithoutFallback,
-} from '@/components/dataDisplay/Tabs/Tabs.stories';
+} from '@/aether-ui-core/components/dataDisplay/Tabs/Tabs.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/Tabs',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import CoreButtonMeta, {
   Button as CoreButton,
-} from '@/components/actions/Button/Button.stories';
+} from '@/aether-ui-core/components/actions/Button/Button.stories';
 import { Button as Component } from './index';
 import { EButtonVariant } from './Button.global.types';
 

@@ -5,7 +5,7 @@ import CoreCarouselMeta, {
   Carousel as CoreCarousel,
   CarouselWithButtons as CoreCarouselWithButtons,
   EmptyCarouselWithFallback as CoreEmptyCarouselWithFallback,
-} from '@/components/dataDisplay/Carousel/Carousel.stories';
+} from '@/aether-ui-core/components/dataDisplay/Carousel/Carousel.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/Carousel',

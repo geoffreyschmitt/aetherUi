@@ -3,7 +3,7 @@ import React from 'react';
 import { RootElement } from './ButtonLink.styles';
 import { TButtonLink } from './ButtonLink.types';
 import { EButtonVariant } from '@/componentsImplementationExamples/actions/Button/Button.global.types';
-import { classNames } from '@/utils';
+import { classNames } from 'src/aether-ui-core/utils';
 
 export const ButtonLink = ({
   className,

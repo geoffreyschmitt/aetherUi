@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Typography } from '@/components/miscellaneous/Typography';
+import { Typography } from '@/aether-ui-core/components/miscellaneous/Typography';
 
 export const RootElement = styled(Typography)`
   &.typography--heading {

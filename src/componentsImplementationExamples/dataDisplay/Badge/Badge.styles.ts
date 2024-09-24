@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Badge } from '@/components/dataDisplay/Badge';
+import { Badge } from '@/aether-ui-core/components/dataDisplay/Badge';
 
 export const RootElement = styled(Badge)`
   display: inline-flex;

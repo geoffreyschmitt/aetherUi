@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Badge as Component } from '.';
 import CoreBadgeMeta, {
   Badge as CoreBadge,
-} from '@/components/dataDisplay/Badge/Badge.stories';
+} from '@/aether-ui-core/components/dataDisplay/Badge/Badge.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/Badge',

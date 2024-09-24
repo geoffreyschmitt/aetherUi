@@ -5,7 +5,7 @@ import CoreCheckboxMeta, {
   Checkbox as CoreCheckbox,
   CheckboxWithCustomColor as CoreCheckboxWithCustomColor,
   CheckboxWithNoChildren as CoreCheckboxWithNoChildren,
-} from '@/components/actions/Checkbox/Checkbox.stories';
+} from '@/aether-ui-core/components/actions/Checkbox/Checkbox.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/Checkbox',
