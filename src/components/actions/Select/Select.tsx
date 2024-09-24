@@ -67,16 +67,6 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
     );
 
     useEffect(() => {
-      console.log('==========');
-      console.log(currentSelectedOptionIndex);
-      console.log(
-        currentSelectedOptionIndex
-          ? (optionList[currentSelectedOptionIndex] ?? null)
-          : null,
-      );
-    }, [currentSelectedOptionIndex]);
-
-    useEffect(() => {
       setSelectOptionLabel(selectedOption?.label ?? defaultLabel ?? '');
     }, [selectedOption, defaultLabel]);
 
@@ -87,9 +77,13 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
     }, [isOpen]);
 
     useEffect(() => {
-      setSelectedOption(optionList[currentSelectedOptionIndex] ?? null);
+      if (currentSelectedOptionIndex) {
+        setSelectedOption(optionList[currentSelectedOptionIndex] ?? null);
+        onSelectedValueChange?.(optionList[currentSelectedOptionIndex].value);
+      } else {
+        setSelectedOption(null);
+      }
       setIsOpen(false);
-      onSelectedValueChange?.(optionList[currentSelectedOptionIndex].value);
     }, [currentSelectedOptionIndex, optionList, onSelectedValueChange]);
 
     useEffect(() => {
