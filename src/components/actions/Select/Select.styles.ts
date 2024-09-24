@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const RootElement = styled.div`
   position: relative;
+  width: 100%;
 
   .select__select {
     display: none;
