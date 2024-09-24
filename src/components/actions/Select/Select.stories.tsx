@@ -29,3 +29,9 @@ export const SelectWithLabel: Story = {
     label: 'label of the component',
   },
 };
+export const SelectWithAutoSelectFirstOption: Story = {
+  args: {
+    ...Select.args,
+    autoSelectFirstOption: true,
+  },
+};
