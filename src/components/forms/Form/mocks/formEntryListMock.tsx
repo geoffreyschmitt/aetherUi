@@ -74,4 +74,10 @@ export const formEntryListMock: TForm['formEntryList'] = [
       },
     ],
   },
+  {
+    componentType: 'textArea',
+    label: 'Message',
+    className: 'form-entry--message',
+    name: 'message',
+  },
 ];

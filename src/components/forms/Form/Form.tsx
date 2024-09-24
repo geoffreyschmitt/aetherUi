@@ -11,6 +11,7 @@ import {
   TRadioFormEntry,
   TRadioListFormEntry,
   TSelectFormEntry,
+  TTextAreaFormEntry,
 } from './Form.types';
 import { Input } from '@/components/actions/Input';
 import { Radio } from '@/components/actions/Radio';
@@ -19,12 +20,14 @@ import { Select } from '@/components/actions/Select';
 import { RadioList } from '@/components/lists/RadioList';
 import { dialogEventChannel, formEventChannel } from '@/eventChannels';
 import { Button } from '@/components/actions';
+import { TextArea } from '@/components/actions/TextArea';
 
 export const Form = ({
   className,
   id,
   formEntryList,
   InputComponent = Input,
+  TextAreaComponent = TextArea,
   RadioComponent = Radio,
   CheckboxComponent = Checkbox,
   SelectComponent = Select,
@@ -45,35 +48,66 @@ export const Form = ({
         return (
           <InputComponent
             {...(formEntryProps as TInputFormEntry)}
-            className={classNames('form__form-entry', formEntryProps.className)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--input',
+              formEntryProps.className,
+            )}
+          />
+        );
+      case 'textArea':
+        return (
+          <TextAreaComponent
+            {...(formEntryProps as TTextAreaFormEntry)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--text-area',
+              formEntryProps.className,
+            )}
           />
         );
       case 'radio':
         return (
           <RadioComponent
             {...(formEntryProps as TRadioFormEntry)}
-            className={classNames('form__form-entry', formEntryProps.className)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--radio',
+              formEntryProps.className,
+            )}
           />
         );
       case 'checkbox':
         return (
           <CheckboxComponent
             {...(formEntryProps as TCheckboxFormEntry)}
-            className={classNames('form__form-entry', formEntryProps.className)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--checkbox',
+              formEntryProps.className,
+            )}
           />
         );
       case 'select':
         return (
           <SelectComponent
             {...(formEntryProps as TSelectFormEntry)}
-            className={classNames('form__form-entry', formEntryProps.className)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--select',
+              formEntryProps.className,
+            )}
           />
         );
       case 'radioList':
         return (
           <RadioListComponent
             {...(formEntryProps as TRadioListFormEntry)}
-            className={classNames('form__form-entry', formEntryProps.className)}
+            className={classNames(
+              'form__form-entry',
+              'form__form-entry--radio-list',
+              formEntryProps.className,
+            )}
           />
         );
       default:

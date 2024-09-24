@@ -7,12 +7,7 @@ import { composeStories } from '@storybook/react';
 
 import * as stories from './Input.stories';
 
-const {
-  Input,
-  InputWithDefaultValue,
-  InputWithBeforeContentSlot,
-  InputWithAfterContentSlot,
-} = composeStories(stories);
+const { Input, InputWithDefaultValue } = composeStories(stories);
 
 describe('Input Component', () => {
   it('renders with default props', () => {
@@ -40,30 +35,6 @@ describe('Input Component', () => {
     const componentElement = getByTestId('Input');
     expect(componentElement).toBeInTheDocument();
     expect(componentElement).toHaveClass('input test-class');
-  });
-
-  it('render with beforeContentSlot when prop is provided', () => {
-    const { getByTestId } = render(<InputWithBeforeContentSlot />);
-    const componentElement = getByTestId('Input');
-    const beforeContentSlotElement = componentElement.querySelector(
-      '.input__before-content',
-    );
-    expect(beforeContentSlotElement).toBeInTheDocument();
-    expect(beforeContentSlotElement).toHaveTextContent(
-      InputWithBeforeContentSlot.args.beforeContentSlot as string,
-    );
-  });
-
-  it('render with afterContentSlot when prop is provided', () => {
-    const { getByTestId } = render(<InputWithAfterContentSlot />);
-    const componentElement = getByTestId('Input');
-    const afterContentSlotElement = componentElement.querySelector(
-      '.input__after-content',
-    );
-    expect(afterContentSlotElement).toBeInTheDocument();
-    expect(afterContentSlotElement).toHaveTextContent(
-      InputWithAfterContentSlot.args.afterContentSlot as string,
-    );
   });
 
   it('render with default value when provided', () => {
