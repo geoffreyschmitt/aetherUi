@@ -78,4 +78,11 @@ export type TSelect = TComponentProps &
      * @type {string}
      */
     optionListAriaLabel: string;
+    /**
+     * Indicates whether the first option should be automatically selected
+     * in a dropdown or similar selection component.
+     *
+     * @type {boolean}
+     */
+    autoSelectFirstOption?: boolean;
   }>;

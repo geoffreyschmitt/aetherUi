@@ -29,10 +29,18 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
       defaultValue,
       onSelectedValueChange,
       optionListAriaLabel,
+      autoSelectFirstOption,
       ...props
     },
     forwardedRef,
   ) => {
+    const getCurrentSelectedOptionIndex = () =>
+      findOptionIndexBasedOnValue(defaultValue) >= 0
+        ? findOptionIndexBasedOnValue(defaultValue)
+        : autoSelectFirstOption
+          ? (findFirstAvailableOptionIndex() ?? null)
+          : null;
+
     const ref = useRef<HTMLDivElement>(null);
     const findOptionIndexBasedOnValue = (value?: string) => {
       if (!defaultValue) {
@@ -45,17 +53,32 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
     };
     const [isOpen, setIsOpen] = useState(false);
     const [currentSelectedOptionIndex, setCurrentSelectedOptionIndex] =
-      useState(
-        findOptionIndexBasedOnValue(defaultValue) >= 0
-          ? findOptionIndexBasedOnValue(defaultValue)
-          : (findFirstAvailableOptionIndex() ?? null),
-      );
+      useState<number | null>(getCurrentSelectedOptionIndex());
     const [selectedOption, setSelectedOption] = useState<TSelectOption | null>(
-      optionList[currentSelectedOptionIndex] ?? null,
+      currentSelectedOptionIndex
+        ? (optionList[currentSelectedOptionIndex] ?? null)
+        : null,
     );
     const [focusedOptionIndex, setFocusedOptionIndex] = useState<number | null>(
       null,
     );
+    const [selectOptionLabel, setSelectOptionLabel] = useState<string>(
+      selectedOption?.label ?? defaultLabel ?? '',
+    );
+
+    useEffect(() => {
+      console.log('==========');
+      console.log(currentSelectedOptionIndex);
+      console.log(
+        currentSelectedOptionIndex
+          ? (optionList[currentSelectedOptionIndex] ?? null)
+          : null,
+      );
+    }, [currentSelectedOptionIndex]);
+
+    useEffect(() => {
+      setSelectOptionLabel(selectedOption?.label ?? defaultLabel ?? '');
+    }, [selectedOption, defaultLabel]);
 
     useEffect(() => {
       if (!isOpen) {
@@ -70,11 +93,7 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
     }, [currentSelectedOptionIndex, optionList, onSelectedValueChange]);
 
     useEffect(() => {
-      setCurrentSelectedOptionIndex(
-        findOptionIndexBasedOnValue(defaultValue) >= 0
-          ? findOptionIndexBasedOnValue(defaultValue)
-          : (findFirstAvailableOptionIndex() ?? null),
-      );
+      setCurrentSelectedOptionIndex(getCurrentSelectedOptionIndex());
     }, [defaultValue]);
 
     useImperativeHandle(forwardedRef, () => ref.current as HTMLDivElement);
@@ -188,7 +207,7 @@ export const Select = forwardRef<HTMLDivElement, TSelect>(
           }
         >
           {label && <div className="select__label">{label}</div>}
-          {selectedOption?.label ?? defaultLabel ?? ''}
+          {selectOptionLabel}
           <Icon
             className={'select__value-icon'}
             variant={EIconVariant.CHEVRON}

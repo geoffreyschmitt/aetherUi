@@ -17,6 +17,7 @@ export const RootElement = styled.div`
   }
 
   .select__value-icon {
+    margin-left: auto;
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
   }
