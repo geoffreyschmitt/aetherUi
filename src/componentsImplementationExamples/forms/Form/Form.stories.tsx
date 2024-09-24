@@ -11,6 +11,7 @@ const omittedArgTypes = [
   'SelectComponent',
   'CheckboxComponent',
   'RadioComponent',
+  'RadioListComponent',
 ];
 
 const formArgTypes = Object.entries(CoreFormMeta.argTypes ?? {}).reduce(
