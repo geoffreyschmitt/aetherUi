@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Checkbox } from '@/components/actions/Checkbox';
+import { Checkbox } from '@/aether-ui-core/components/actions/Checkbox';
 
 export const RootElement = styled(Checkbox)`
   --checkbox-size: 20px;

@@ -1,3 +1,3 @@
-import { TFooter as TCoreFooter } from '@/components/navigations/Footer';
+import { TFooter as TCoreFooter } from '@/aether-ui-core/components/navigations/Footer';
 
 export type TFooter = TCoreFooter;

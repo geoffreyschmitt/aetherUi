@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ContactForm as Component } from '.';
 import CoreFormMeta from '@/componentsImplementationExamples/forms/Form/Form.stories';
 import { expect, fn, userEvent, within } from '@storybook/test';
-import { formEventChannel } from '@/eventChannels';
+import { formEventChannel } from 'src/aether-ui-core/eventChannels';
 import { LoginForm } from '@/componentsImplementationExamples/forms/LoginForm/LoginForm.stories';
 
 const omittedArgTypes = ['buttonCtaProps'];

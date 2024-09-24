@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonList as Component } from '.';
 import CoreButtonListMeta, {
   ButtonList as CoreButtonList,
-} from '@/components/lists/ButtonList/ButtonList.stories';
+} from '@/aether-ui-core/components/lists/ButtonList/ButtonList.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Lists/ButtonList',

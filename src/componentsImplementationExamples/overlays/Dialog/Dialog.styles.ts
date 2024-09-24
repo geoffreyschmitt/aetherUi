@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Dialog } from '@/components/overlays/Dialog';
+import { Dialog } from '@/aether-ui-core/components/overlays/Dialog';
 
 export const RootElement = styled(Dialog)`
   position: relative;

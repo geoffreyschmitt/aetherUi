@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import React from 'react';
-import { GlobalStyles } from '@/GlobalStyles';
+import { GlobalStyles } from 'src/aether-ui-core/GlobalStyles';
 
 const preview: Preview = {
   parameters: {

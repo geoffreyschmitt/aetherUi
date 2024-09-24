@@ -1,3 +1,3 @@
-import { TButtonList as TCoreButtonList } from '@/components/lists/ButtonList';
+import { TButtonList as TCoreButtonList } from '@/aether-ui-core/components/lists/ButtonList';
 
 export type TButtonList = TCoreButtonList;

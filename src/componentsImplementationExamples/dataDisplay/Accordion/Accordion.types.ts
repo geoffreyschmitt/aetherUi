@@ -1,3 +1,3 @@
-import { TAccordion as TCoreAccordion } from '@/components/dataDisplay/Accordion';
+import { TAccordion as TCoreAccordion } from '@/aether-ui-core/components/dataDisplay/Accordion';
 
 export type TAccordion = TCoreAccordion;

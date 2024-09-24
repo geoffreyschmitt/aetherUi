@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Breadcrumb as Component } from '.';
 import CoreBreadcrumbMeta, {
   Breadcrumb as CoreBreadcrumb,
-} from '@/components/navigations/Breadcrumb/Breadcrumb.stories';
+} from '@/aether-ui-core/components/navigations/Breadcrumb/Breadcrumb.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Navigations/Breadcrumb',

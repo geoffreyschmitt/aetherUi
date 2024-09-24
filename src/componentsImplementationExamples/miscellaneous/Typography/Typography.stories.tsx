@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Typography as Component } from '.';
 import CoreTypographyMeta, {
   Typography as CoreTypography,
-} from '@/components/miscellaneous/Typography/Typography.stories';
+} from '@/aether-ui-core/components/miscellaneous/Typography/Typography.stories';
 import { ETypographyVariant } from './Typography.types';
 
 const meta: Meta<typeof Component> = {

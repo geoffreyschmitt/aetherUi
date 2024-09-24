@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LoginForm as Component } from '.';
 import CoreFormMeta from '@/componentsImplementationExamples/forms/Form/Form.stories';
 import { expect, fn, userEvent, within } from '@storybook/test';
-import { formEventChannel } from '@/eventChannels';
+import { formEventChannel } from 'src/aether-ui-core/eventChannels';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Forms/LoginForm',

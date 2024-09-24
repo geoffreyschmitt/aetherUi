@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Header } from '@/components/navigations/Header';
+import { Header } from '@/aether-ui-core/components/navigations/Header';
 
 export const RootElement = styled(Header)`
   background: #f6f6f6;

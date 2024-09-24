@@ -1,3 +1,3 @@
-import { TDrawer as TCoreDrawer } from '@/components/overlays/Drawer';
+import { TDrawer as TCoreDrawer } from '@/aether-ui-core/components/overlays/Drawer';
 
 export type TDrawer = Omit<TCoreDrawer, 'DialogComponent'>;

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Container as Component } from '.';
 import CoreContainerMeta, {
   Container as CoreContainer,
-} from '@/components/layouts/Container/Container.stories';
+} from '@/aether-ui-core/components/layouts/Container/Container.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Layouts/Container',

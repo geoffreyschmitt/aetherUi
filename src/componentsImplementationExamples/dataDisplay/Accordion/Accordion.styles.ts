@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Accordion } from '@/components/dataDisplay/Accordion';
+import { Accordion } from '@/aether-ui-core/components/dataDisplay/Accordion';
 
 export const RootElement = styled(Accordion)`
   .accordion-item {

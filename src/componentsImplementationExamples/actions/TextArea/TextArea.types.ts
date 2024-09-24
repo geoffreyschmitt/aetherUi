@@ -1,3 +1,3 @@
-import { TTextArea as TCoreTextArea } from '@/components/actions/TextArea';
+import { TTextArea as TCoreTextArea } from '@/aether-ui-core/components/actions/TextArea';
 
 export type TTextArea = TCoreTextArea;

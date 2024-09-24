@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Container } from '@/components/layouts/Container';
+import { Container } from '@/aether-ui-core/components/layouts/Container';
 
 export const RootElement = styled(Container)`
   --container-max-width: 1920px;

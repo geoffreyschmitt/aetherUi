@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ProgressBar as Component } from './index';
 import CoreProgressBarMeta, {
   ProgressBar as CoreProgressBar,
-} from '@/components/dataDisplay/ProgressBar/ProgressBar.stories';
+} from '@/aether-ui-core/components/dataDisplay/ProgressBar/ProgressBar.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/ProgressBar',

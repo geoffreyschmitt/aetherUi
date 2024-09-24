@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Table } from '@/components/dataDisplay/Table';
+import { Table } from '@/aether-ui-core/components/dataDisplay/Table';
 
 export const RootElement = styled(Table)`
   border-collapse: collapse;

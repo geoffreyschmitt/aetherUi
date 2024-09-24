@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Carousel } from '@/components/dataDisplay/Carousel';
+import { Carousel } from '@/aether-ui-core/components/dataDisplay/Carousel';
 
 export const RootElement = styled(Carousel)`
   .carousel__scroll-button {

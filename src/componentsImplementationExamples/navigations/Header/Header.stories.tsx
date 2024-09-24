@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Header as Component } from '.';
 import CoreHeaderMeta, {
   Header as CoreHeader,
-} from '@/components/navigations/Header/Header.stories';
+} from '@/aether-ui-core/components/navigations/Header/Header.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Navigations/Header',

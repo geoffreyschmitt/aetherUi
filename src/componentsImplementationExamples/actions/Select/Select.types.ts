@@ -1,3 +1,3 @@
-import { TSelect as TCoreSelect } from '@/components/actions/Select';
+import { TSelect as TCoreSelect } from '@/aether-ui-core/components/actions/Select';
 
 export type TSelect = TCoreSelect;

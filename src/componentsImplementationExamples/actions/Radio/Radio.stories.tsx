@@ -4,7 +4,7 @@ import { Radio as Component } from '.';
 import CoreRadioMeta, {
   Radio as CoreRadio,
   RadioDefaultChecked as CoreRadioDefaultChecked,
-} from '@/components/actions/Radio/Radio.stories';
+} from '@/aether-ui-core/components/actions/Radio/Radio.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/Actions/Radio',

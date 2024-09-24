@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Pagination } from '@/components/navigations/Pagination';
+import { Pagination } from '@/aether-ui-core/components/navigations/Pagination';
 
 export const RootElement = styled(Pagination)`
   .pagination__item-list {

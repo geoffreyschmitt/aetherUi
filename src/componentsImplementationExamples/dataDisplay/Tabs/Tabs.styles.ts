@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Tabs } from '@/components/dataDisplay/Tabs';
+import { Tabs } from '@/aether-ui-core/components/dataDisplay/Tabs';
 
 export const RootElement = styled(Tabs)`
   width: 100%;

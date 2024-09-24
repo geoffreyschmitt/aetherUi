@@ -2,7 +2,7 @@ import React from 'react';
 
 import { RootElement } from './LoginForm.styles';
 import { TLoginForm } from './LoginForm.types';
-import { classNames } from '@/utils';
+import { classNames } from 'src/aether-ui-core/utils';
 
 export const LoginForm = ({ className, ...props }: TLoginForm) => {
   const formEntryList: TLoginForm['formEntryList'] = [

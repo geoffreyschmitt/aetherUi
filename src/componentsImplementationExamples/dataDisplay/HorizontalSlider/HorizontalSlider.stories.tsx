@@ -4,7 +4,7 @@ import { HorizontalSlider as Component } from '.';
 import CoreHorizontalSliderMeta, {
   EmptyHorizontalSliderWithFallback as CoreEmptyHorizontalSliderWithFallback,
   HorizontalSlider as CoreHorizontalSlider,
-} from '@/components/dataDisplay/HorizontalSlider/HorizontalSlider.stories';
+} from '@/aether-ui-core/components/dataDisplay/HorizontalSlider/HorizontalSlider.stories';
 
 const meta: Meta<typeof Component> = {
   title: 'Implementation Example/dataDisplay/HorizontalSlider',

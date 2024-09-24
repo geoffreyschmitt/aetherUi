@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { ProgressBar } from '@/components/dataDisplay/ProgressBar';
+import { ProgressBar } from '@/aether-ui-core/components/dataDisplay/ProgressBar';
 
 export const RootElement = styled(ProgressBar)`
   --progress-bar-height: 8px;

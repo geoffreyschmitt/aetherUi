@@ -4,7 +4,7 @@ import { Form as Component } from '.';
 import CoreFormMeta, {
   Form as CoreForm,
   FormWithInteraction as CoreFormWithInteraction,
-} from '@/components/forms/Form/Form.stories';
+} from '@/aether-ui-core/components/forms/Form/Form.stories';
 
 const omittedArgTypes = [
   'InputComponent',
