@@ -8,6 +8,7 @@ import CoreFormMeta, {
 
 const omittedArgTypes = [
   'InputComponent',
+  'TextAreaComponent',
   'SelectComponent',
   'CheckboxComponent',
   'RadioComponent',
