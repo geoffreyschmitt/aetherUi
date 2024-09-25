@@ -15,6 +15,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@/aether-ui-core/*": ["./src/aether-ui-core/src/*"],
       "@/*": ["./src/*"]
     }
   },
